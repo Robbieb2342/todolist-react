@@ -1,6 +1,20 @@
 .todo-list-item{
-    border: 1px solid #000;
+    position: relative;
+    border: 1px solid #fff;
     margin: 10px;
-    background: aqua;
-    width: 250px;
+    background: rgb(0, 0, 0);
+    max-width: 360px;
+    padding: 16px;
+    border-radius: 9px;
+    box-shadow: 7px 10px 13px -7px #4633FF;
+    color: #fff;
+}
+
+.deleteBtn{
+    margin-top: 9px;
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+    background: #4633FF;
+    color: #fff;
 }

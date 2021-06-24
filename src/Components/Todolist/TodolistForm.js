@@ -35,7 +35,7 @@ const TodoListForm = (props) => {
                 <label>Title</label>
                 <input type='text' onChange={handleTodo} value={todo.title} name='title'></input>
                 <label>Content</label>
-                <input type='text' onChange={handleTodo} value={todo.content} name='content'></input>
+                <textarea type='text' onChange={handleTodo} value={todo.content} name='content'></textarea>
             </div>
             <button type='button' onClick={handleSubmit}>Submit</button>
         </form>

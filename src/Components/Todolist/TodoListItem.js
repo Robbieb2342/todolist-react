@@ -9,9 +9,9 @@ const TodoListItem = props => {
     
     return(
         <div className='todo-list-item'>
-            <h1>{props.title}</h1>
+            <h2>{props.title}</h2>
             <p>{props.content}</p>
-            <button onClick={handleClick}>Delete</button>
+            <button className='deleteBtn' onClick={handleClick}>Delete</button>
         </div>
     )
 }
