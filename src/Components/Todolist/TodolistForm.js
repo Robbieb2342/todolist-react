@@ -21,6 +21,10 @@ const TodoListForm = (props) => {
 
     const handleSubmit = () => {
         props.todoItem(todo)
+        setTodo({
+            title:'',
+            content:''
+        })
         return;
     }
 

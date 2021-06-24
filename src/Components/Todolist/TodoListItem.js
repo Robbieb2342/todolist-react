@@ -1,15 +1,18 @@
 import React from 'react';
-
+import '../Styling/TodoListItem.css'
 
 const TodoListItem = props => {
 
-    const newTodoItemTitle = props.data.map((todo) => todo.title)
-    const newTodoItemContent = props.data.map((todo) => todo.content)
+    const handleClick = () => {
+        props.onDelete(props.id)
+    }    
     
-    return(<>
-        <h1>{newTodoItemTitle}</h1>
-        <p>{newTodoItemContent}</p>
-        </>
+    return(
+        <div className='todo-list-item'>
+            <h1>{props.title}</h1>
+            <p>{props.content}</p>
+            <button onClick={handleClick}>Delete</button>
+        </div>
     )
 }
 

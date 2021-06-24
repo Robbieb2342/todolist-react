@@ -11,6 +11,14 @@ const TodoList = () => {
     const handleTodoItem = (todo) => {
         setNewTodo((prevTodos) => {
             return[todo, ...prevTodos]
+        })   
+    }
+
+    const handleDeleteItem = (id) => {
+        setNewTodo((prevTodos) => {
+            return prevTodos.filter((item, index) => {
+                return index !== id
+            })
         })
         
     }
@@ -18,7 +26,16 @@ const TodoList = () => {
     return(
         <div className='todolist'>
             <TodoListForm todoItem={handleTodoItem} /> 
-            <TodoListItem data={newTodo}/>
+            {newTodo.map((todo, index) => (
+
+            <TodoListItem 
+            key={Math.random()}
+            id={index}
+            title={todo.title}
+            content={todo.content}
+            onDelete={handleDeleteItem}
+            />
+            ))}
         </div>
     )
 }
