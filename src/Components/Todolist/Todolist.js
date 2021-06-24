@@ -25,17 +25,21 @@ const TodoList = () => {
     
     return(
         <div className='todolist'>
-            <TodoListForm todoItem={handleTodoItem} /> 
+            <div>
+                <TodoListForm todoItem={handleTodoItem} /> 
+            </div>
+            <div className='todoListLayout'>
             {newTodo.map((todo, index) => (
 
             <TodoListItem 
-            key={Math.random()}
-            id={index}
-            title={todo.title}
-            content={todo.content}
-            onDelete={handleDeleteItem}
+                key={Math.random()}
+                id={index}
+                title={todo.title}
+                content={todo.content}
+                onDelete={handleDeleteItem}
             />
             ))}
+            </div>
         </div>
     )
 }
